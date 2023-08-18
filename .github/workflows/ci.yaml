@@ -58,6 +58,7 @@ jobs:
 
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
+        continue-on-error: true
         if: always()
         with:
           files: ./EdgeSolution/modules/**/nose2-junit.xml
